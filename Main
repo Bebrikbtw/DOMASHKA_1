@@ -1,0 +1,19 @@
+public class Main {
+    public static void main(String[] args) {
+        Phone phone1 = new Phone();
+        Phone phone2 = new Phone("555-1234", "Samsung Galaxy");
+        Phone phone3 = new Phone("555-4321", "iPhone", 0.2);
+
+        System.out.println(phone1.getNumber() + " " + phone1.getModel() + " " + phone1.getWeight());
+        System.out.println(phone2.getNumber() + " " + phone2.getModel() + " " + phone2.getWeight());
+        System.out.println(phone3.getNumber() + " " + phone3.getModel() + " " + phone3.getWeight());
+
+        phone1.receiveCall("Alice");
+        phone2.receiveCall("Bob");
+        phone3.receiveCall("Charlie", "555-9999");
+
+        phone1.sendMessage("555-1111", "555-2222");
+        phone2.sendMessage("555-3333");
+        phone3.sendMessage("555-4444", "555-5555", "555-6666");
+    }
+}
